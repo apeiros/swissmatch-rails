@@ -5,16 +5,14 @@ Gem::Specification.new do |s|
   s.version                   = "0.0.1"
   s.authors                   = "Stefan Rusterholz"
   s.email                     = "stefan.rusterholz@gmail.com"
-  s.homepage                  = "http://github.com/apeiros/swissmatch"
+  s.homepage                  = "http://github.com/apeiros/swissmatch-rails"
 
   s.description               = <<-DESCRIPTION.gsub(/^    /, '').chomp
-    Deal with swiss cantons, communities and zip codes, as provided by the swiss postal
-    service.
-    Additionally handle data updates provided by the swiss postal service.
+    Adds ActiveRecord models and javascript assets for rails to swissmatch.
   DESCRIPTION
 
   s.summary                   = <<-SUMMARY.gsub(/^    /, '').chomp
-    Deal with swiss zip codes, cantons and communities.
+    Adds ActiveRecord models and javascript assets for rails to swissmatch.
   SUMMARY
 
   s.files                     =
@@ -23,8 +21,8 @@ Gem::Specification.new do |s|
     Dir['lib/**/*'] +
     Dir['rake/**/*'] +
     Dir['test/**/*'] +
+    Dir['*.gemspec'] +
     %w[
-      swissmatch.gemspec
       Rakefile
       README.markdown
     ]
@@ -34,8 +32,7 @@ Gem::Specification.new do |s|
     s.executables = executables unless executables.empty?
   end
 
-  s.add_dependency "rubyzip"
-  s.add_dependency "autocompletion"
+  s.add_dependency "swissmatch"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1")
   s.rubygems_version          = "1.3.1"
