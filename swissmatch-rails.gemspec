@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 Gem::Specification.new do |s|
-  s.name                      = "swissmatch"
+  s.name                      = "swissmatch-rails"
   s.version                   = "0.0.1"
   s.authors                   = "Stefan Rusterholz"
   s.email                     = "stefan.rusterholz@gmail.com"
