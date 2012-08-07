@@ -33,6 +33,7 @@ Gem::Specification.new do |s|
   end
 
   s.add_dependency "swissmatch"
+  s.add_dependency "activerecord", ">= 3.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1")
   s.rubygems_version          = "1.3.1"
