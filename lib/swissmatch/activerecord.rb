@@ -8,6 +8,8 @@ require 'active_record'
 
 
 module SwissMatch
+
+  # ActiveRecord models for swissmatch
   module ActiveRecord
     LanguageToCode = {
       :de => 1,
