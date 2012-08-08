@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>README</h1>
+
+<h2>Summary</h2>
+
+<p>Adds ActiveRecord models and javascript assets for rails to swissmatch.</p>
+
+<h2>Installation</h2>
+
+<p>Install the gem: <code>gem install swissmatch-rails</code><br>
+Depending on how you installed rubygems, you have to use <code>sudo</code>:
+<code>sudo gem install swissmatch-rails</code><br>
+In Ruby: <code>require &#39;swissmatch/rails&#39;</code></p>
+
+<h2>Usage</h2>
+
+<h3>Gemfile</h3>
+
+<p>To use swissmatch-rails, the best way is to put the following line into your Gemfile:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>swissmatch</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:require</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>swissmatch/rails</span><span class='tstring_end'>'</span></span>
+</code></pre>
+
+<h3>SwissMatch and Databases</h3>
+
+<p>If you want to load the data into your database, you can use:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_swissmatch_db'>swissmatch_db</span> <span class='id identifier rubyid_create'>create</span>
+<span class='id identifier rubyid_swissmatch_db'>swissmatch_db</span> <span class='id identifier rubyid_seed'>seed</span>
+</code></pre>
+
+<p>This needs active_record 3.2+ to be installed, and you should either be in a rails project, or
+use the -c option to specify a database configuration file.
+The models used for that can be loaded by <code>require &#39;swissmatch/active_record&#39;</code>.
+See SwissMatch::ActiveRecord::Canton, SwissMatch::ActiveRecord::Community and
+SwissMatch::ActiveRecord::ZipCode</p>
+
+<h3>Configuration</h3>
+
+<p>The swissmatch-rails gem loads the configuration from PROJECT_ROOT/config/swissmatch.yml.
+The file should have the following structure:</p>
+
+<pre class="code ruby"><code>global:
+  telsearch_key:    &quot;your telsearch API key&quot;
+  data_directory:   &quot;A path to where you want your data files stored, relative paths are relative to PROJECT_ROOT&quot;
+  cache_directory:  &quot;A path to where swissmatch should store its cache&quot;
+development:
+  # same keys as for global, you can have environment specific settings here
+</code></pre>
+
+<p>The key &#39;global&#39; will be used as the base for every environment.</p>
+
+<h2>Relevant Classes and Modules</h2>
+
+<ul>
+<li><strong><span class='object_link'><a href="SwissMatch/ActiveRecord.html" title="SwissMatch::ActiveRecord (module)">SwissMatch::ActiveRecord</a></span></strong>
+Container for all ActiveRecord models</li>
+</ul>
+
+<h2>Links</h2>
+
+<ul>
+<li><a href="https://github.com/apeiros/swissmatch">Main Project</a></li>
+<li><a href="http://rdoc.info/github/apeiros/swissmatch-directories/">Online API Documentation</a></li>
+<li><a href="https://github.com/apeiros/swissmatch-directories">Public Repository</a></li>
+<li><a href="https://github.com/apeiros/swissmatch-directories/issues">Bug Reporting</a></li>
+<li><a href="https://rubygems.org/gems/swissmatch-directories">RubyGems Site</a></li>
+<li><a href="http://www.post.ch/match">Swiss Posts MAT[CH]</a></li>
+</ul>
+
+<h2>License</h2>
+
+<p>You can use this code under the <a href="file.LICENSE.html" title="BSD-2-Clause License">BSD-2-Clause License</a>, free of charge.
+If you need a different license, please ask the author.</p>
+
+<h2>Credits</h2>
+
+<ul>
+<li><a href="http://www.awd.ch/">AWD Switzerland</a> for donating time to work on this gem.</li>
+</ul>
+</div></div>
+
+    <div id="footer">
+  Generated on Wed Aug  8 14:07:22 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
