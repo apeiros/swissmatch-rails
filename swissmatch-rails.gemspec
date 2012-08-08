@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name                      = "swissmatch-rails"
-  s.version                   = "0.0.1"
+  s.version                   = "0.0.2"
   s.authors                   = "Stefan Rusterholz"
   s.email                     = "stefan.rusterholz@gmail.com"
   s.homepage                  = "http://github.com/apeiros/swissmatch-rails"
@@ -32,8 +32,6 @@ Gem::Specification.new do |s|
     executables = Dir.chdir('bin') { Dir.glob('**/*').select { |f| File.executable?(f) } }
     s.executables = executables unless executables.empty?
   end
-
-  s.add_dependency "swissmatch"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1")
   s.rubygems_version          = "1.3.1"
