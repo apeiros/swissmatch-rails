@@ -7,18 +7,20 @@ Summary
 Adds ActiveRecord models and javascript assets for rails to swissmatch.
 
 
-
 Installation
 ------------
-`gem install swissmatch-rails`
-
+Install the gem: `gem install swissmatch-rails`  
+Depending on how you installed rubygems, you have to use `sudo`:
+`sudo gem install swissmatch-rails`  
+In Ruby: `require 'swissmatch/rails'`
 
 
 Usage
 -----
-### Example usage
+### Gemfile
+To use swissmatch-rails, the best way is to put the following line into your Gemfile:
 
-    require 'swissmatch/rails'
+    gem 'swissmatch', :require => 'swissmatch/rails'
 
 
 ### SwissMatch and Databases
@@ -47,14 +49,31 @@ The file should have the following structure:
 The key 'global' will be used as the base for every environment.
 
 
+Relevant Classes and Modules
+----------------------------
+* __{SwissMatch::ActiveRecord}__
+  Container for all ActiveRecord models
 
-Description
------------
-Adds ActiveRecord models and javascript assets for rails to swissmatch.
 
+Links
+-----
+
+* [Main Project](https://github.com/apeiros/swissmatch)
+* [Online API Documentation](http://rdoc.info/github/apeiros/swissmatch-directories/)
+* [Public Repository](https://github.com/apeiros/swissmatch-directories)
+* [Bug Reporting](https://github.com/apeiros/swissmatch-directories/issues)
+* [RubyGems Site](https://rubygems.org/gems/swissmatch-directories)
+* [Swiss Posts MAT[CH]](http://www.post.ch/match)
+
+
+License
+-------
+
+You can use this code under the {file:LICENSE.txt BSD-2-Clause License}, free of charge.
+If you need a different license, please ask the author.
 
 
 Credits
 -------
 
-* <a href="http://www.awd.ch/">AWD Switzerland</a>, for donating time to work on this gem.
+* [AWD Switzerland](http://www.awd.ch/) for donating time to work on this gem.
