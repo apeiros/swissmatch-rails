@@ -51,7 +51,7 @@ module SwissMatch
       io.flush
     end
 
-    def self.seed(data_source=SwissMatch.data)
+    def self.seed(data_source=SwissMatch::Location.data)
       canton2id     = {}
       total         = data_source.cantons.size +
                       data_source.communities.size +
@@ -117,7 +117,7 @@ module SwissMatch
       puts "","Done"
     end
 
-    def self.update(data_source=SwissMatch.data)
+    def self.update(data_source=SwissMatch::Location.data)
     end
 
     class Migration < ::ActiveRecord::Migration
