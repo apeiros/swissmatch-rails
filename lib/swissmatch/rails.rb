@@ -5,11 +5,16 @@
 
 raise "This file should be required after rails has been loaded" unless defined?(ActiveSupport)
 
+module SwissMatch
+  module Rails
+  end
+end
+
 ActiveSupport.on_load(:before_initialize) do
   require 'swissmatch'
 
   # Load environment specific configuration
-  config_path       = Rails.root.join('config/swissmatch.yml')
+  config_path       = ::Rails.root.join('config/swissmatch.yml')
   configuration_all = File.exist?(config_path) ? YAML.load_file(config_path) : {}
   configuration     = configuration_all['global'] || {}
   configuration.merge!(configuration_all[Rails.env] || {})
