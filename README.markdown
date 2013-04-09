@@ -76,4 +76,4 @@ If you need a different license, please ask the author.
 Credits
 -------
 
-* [AWD Switzerland](http://www.awd.ch/) for donating time to work on this gem.
+* [Swiss Life Select Schweiz AG](http://www.swisslife-select.ch/) for donating time to work on this gem.
