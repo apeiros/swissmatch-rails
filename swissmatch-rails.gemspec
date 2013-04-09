@@ -28,8 +28,7 @@ Gem::Specification.new do |s|
     ]
 
   if File.directory?('bin') then
-    executables = Dir.chdir('bin') { Dir.glob('**/*').select { |f| File.executable?(f) } }
-    s.executables = executables unless executables.empty?
+    s.executables = Dir.chdir('bin') { Dir.glob('**/*').select { |f| File.executable?(f) } }
   end
 
   s.add_dependency "swissmatch"
