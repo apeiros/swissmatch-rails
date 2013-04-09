@@ -57,4 +57,4 @@ Adds ActiveRecord models and javascript assets for rails to swissmatch.
 Credits
 -------
 
-* <a href="http://www.awd.ch/">AWD Switzerland</a>, for donating time to work on this gem.
+* <a href="http://www.swisslife-select.ch/">Swiss Life Select Schweiz AG</a>, for donating time to work on this gem.
