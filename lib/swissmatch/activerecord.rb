@@ -83,7 +83,8 @@ module SwissMatch
             hash[:canton_id]            = canton2id[hash.delete(:canton)]
             hash[:language]             = LanguageToCode[hash.delete(:language)]
             hash[:language_alternative] = LanguageToCode[hash.delete(:language_alternative)]
-            hash[:community_id]         = hash.delete(:community)
+            hash[:community_id]         = hash.delete(:largest_community)
+            hash.delete(:communities)
             hash.update(
               :suggested_name_de => zip_code.suggested_name(:de),
               :suggested_name_fr => zip_code.suggested_name(:fr),
