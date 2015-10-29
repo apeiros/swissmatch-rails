@@ -61,7 +61,7 @@ module SwissMatch
 
       cursor_hidden do
         print_progress(progress, total)
-        without_protection = ActiveRecord::Base.respond_to?(:attr_accessible) ? [{:without_protection => true}] : []
+        without_protection = ::ActiveRecord::Base.respond_to?(:attr_accessible) ? [{:without_protection => true}] : []
 
         ::ActiveRecord::Base.transaction do
           delete_all
