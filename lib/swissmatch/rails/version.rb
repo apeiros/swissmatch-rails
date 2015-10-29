@@ -10,6 +10,6 @@ module SwissMatch
   module Rails
 
     # The version of the swissmatch-location gem.
-    Version = Gem::Version.new("0.0.4")
+    Version = Gem::Version.new("0.0.5")
   end
 end
