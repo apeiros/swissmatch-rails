@@ -61,20 +61,21 @@ module SwissMatch
 
       cursor_hidden do
         print_progress(progress, total)
+        without_protection = ActiveRecord::Base.respond_to?(:attr_accessible) ? [{:without_protection => true}] : []
 
         ::ActiveRecord::Base.transaction do
           delete_all
           print_progress(progress+=10, total)
 
           data_source.cantons.each do |canton|
-            canton2id[canton.license_tag] = SwissMatch::ActiveRecord::Canton.create!(canton.to_hash, :without_protection => true).id
+            canton2id[canton.license_tag] = SwissMatch::ActiveRecord::Canton.create!(canton.to_hash, *without_protection).id
             print_progress(progress+=1, total)
           end
           data_source.communities.partition do |community|
             hash                    = community.to_hash
             hash[:canton_id]        = canton2id[hash.delete(:canton)]
             hash[:agglomeration_id] = hash.delete(:agglomeration)
-            SwissMatch::ActiveRecord::Community.create!(hash, :without_protection => true)
+            SwissMatch::ActiveRecord::Community.create!(hash, *without_protection)
             print_progress(progress+=1, total)
           end
           self_delivered, others = data_source.zip_codes.partition { |code| code.delivery_by.nil? || code.delivery_by == code }
@@ -100,13 +101,13 @@ module SwissMatch
             hash.delete(:valid_until)
             hash[:active]               = true
 
-            SwissMatch::ActiveRecord::ZipCode.create!(hash, :without_protection => true)
+            SwissMatch::ActiveRecord::ZipCode.create!(hash, *without_protection)
             zip_code.names.each do |name|
               hash                = name.to_hash
               hash[:language]     = LanguageToCode[hash.delete(:language)]
               hash[:zip_code_id]  = zip_code.ordering_number
               hash[:designation]  = 2 # designation of type 3 is not currently in the system
-              SwissMatch::ActiveRecord::ZipCodeName.create!(hash, :without_protection => true)
+              SwissMatch::ActiveRecord::ZipCodeName.create!(hash, *without_protection)
             end
             print_progress(progress+=2, total)
           end
