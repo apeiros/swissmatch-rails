@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name                      = "swissmatch-rails"
-  s.version                   = "0.0.4"
+  s.version                   = "0.0.5"
   s.authors                   = "Stefan Rusterholz"
   s.email                     = "stefan.rusterholz@gmail.com"
   s.homepage                  = "http://github.com/apeiros/swissmatch-rails"
